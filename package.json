@@ -2,6 +2,10 @@
   "name": "solo-rpg-lib",
   "version": "1.0.0",
   "main": "src/index.js",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/Ravencrow/solo-rpg-lib"
+  },
   "type": "module",
   "description": "A library to include several solo rpg systems and oracles to use to build bigger software to play solo rpg sessions",
   "keywords": [
