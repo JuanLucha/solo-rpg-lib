@@ -1,0 +1,30 @@
+{
+  "name": "solo-rpg-lib",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "description": "A library to include several solo rpg systems and oracles to use to build bigger software to play solo rpg sessions",
+  "keywords": [
+    "solo-rpg",
+    "rpg",
+    "d&d",
+    "dungeons and dragons",
+    "pathfinder",
+    "dices",
+    "roleplaying",
+    "fate",
+    "fate-rpg"
+  ],
+  "license": "CC-BY-4.0",
+  "author": "Juan Lucha <juanlucha@gmail.com> (https://juanlucha.com/)",
+  "scripts": {
+    "test": "mocha src/**/*.spec.js -r esm",
+    "clean": "rimraf dist && rimraf node_modules"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "esm": "^3.2.25",
+    "mocha": "^9.1.1",
+    "rimraf": "^3.0.2"
+  }
+}
