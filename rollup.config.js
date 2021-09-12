@@ -1,4 +1,5 @@
 import { terser } from 'rollup-plugin-terser'
+import cleaner from 'rollup-plugin-cleaner'
 
 export default {
   input: 'src/index.js',
@@ -38,5 +39,10 @@ export default {
       plugins: [terser()],
       sourcemap: true,
     },
+  ],
+  plugins: [
+    cleaner({
+      targets: ['./dist/'],
+    }),
   ],
 }
