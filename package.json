@@ -1,6 +1,6 @@
 {
   "name": "solo-rpg-lib",
-  "version": "0.9.12",
+  "version": "0.9.13",
   "main": "dist/cjs.cjs",
   "module": "dist/esm.js",
   "exports": {
@@ -34,7 +34,9 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "esm": "^3.2.25",
-    "mocha": "^9.1.1",
+    "mocha": "^9.1.1"
+  },
+  "dependencies": {
     "rollup": "^2.56.3",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-terser": "^7.0.2"
