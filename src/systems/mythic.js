@@ -18,16 +18,17 @@ export const mythic = {
     const dice1 = d10()
     const dice2 = d10()
     const chaosDice = d10()
+    console.log(dice1, dice2, modifier)
 
     let result = dice1 + dice2 + modifier < 10 ? 'No' : 'Yes'
     let randomEvent = false
     if (chaosDice <= this.chaosFactor) {
-      if (isOdd(dice1) && isOdd(dice2)) {
+      if (dice1 === dice2) {
+      } else if (isOdd(dice1) && isOdd(dice2)) {
         result = `Exceptional ${result.toLowerCase()}`
       } else if (!isOdd(dice1) && !isOdd(dice2)) {
         randomEvent = true
         result += ` and random event - `
-      } else if (dice1 === dice2) {
         randomEvent = true
         result = `Exceptional ${result.toLowerCase()} and random event - `
       }
@@ -84,7 +85,7 @@ export const mythic = {
     let dice = d10() + d10()
     dice += this.chaosFactor === 3 ? +2 : this.chaosFactor === 6 ? -2 : 0
     dice = dice < 4 ? 4 : dice > 18 ? 18 : dice
-    return `${details[dice]}: ${this.getEventMeaning()}`
+    return `${details[dice - 1]}: ${this.getEventMeaning()}`
   },
 }
 
